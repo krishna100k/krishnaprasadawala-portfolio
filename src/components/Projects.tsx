@@ -74,6 +74,7 @@ const Projects = () => {
         left: isMaximized ? 0 : `${posX - 550}px`,
         position: "fixed",
         transition: isMaximized || isMinimized ? "top 0.5s ease, left 0.5s ease, width 0.5s ease, height 0.5s ease" : !isMinimized && !isDragging ?  "top 0.5s ease, left 0.5s ease," : "",
+        zIndex : isMaximized ? '1000' : ''
       }}
       className="bg-[#0A0919] rounded-md"
       onDragOver={handleDragOver}
