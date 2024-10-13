@@ -85,7 +85,7 @@ const UserFolder = () => {
       className="bg-[#0A0919] rounded-md"
       onDragOver={handleDragOver}
     >
-        <div draggable onDragStart={handleDragStart} onDrag={(e) => moveFolder(e)} onDragEnd={(e) => finalizePosition(e)}   className="w-full h-10 bg-gray-800/50 backdrop-blur-sm relative top-0 rounded-t-md flex justify-end">
+        <div draggable onDragStart={handleDragStart} onDrag={(e) => moveFolder(e)} onDragEnd={(e) => finalizePosition(e)}   className="w-full h-10 bg-[#0A0919] backdrop-blur-sm relative top-0 rounded-t-md flex justify-end">
             <div className="w-10 hover:bg-gray-500 h-full flex justify-center items-center" onClick={minimizeHandler}><FaMinus size={10} /></div>
             <div className="w-10 hover:bg-gray-500 h-full flex justify-center items-center" onClick={() => setIsMaximized(!isMaximized)}>< FaRegWindowMaximize size={10}/></div>
             <div className="w-10 hover:bg-red-500 h-full flex justify-center items-center" onClick={() => dispatch(closeFolder(folderName))} ><IoCloseSharp /></div>
