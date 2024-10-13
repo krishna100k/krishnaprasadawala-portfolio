@@ -8,7 +8,6 @@ import { FolderInitialState, openFolders } from "@/redux/folderSlice";
 import Projects from "@/components/Projects";
 import WorkExperience from "@/components/WorkExperience";
 import Blogs from "@/components/Blogs";
-import { constants } from "crypto";
 
 export interface Shortcut{
   id : string;

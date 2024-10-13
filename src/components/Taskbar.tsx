@@ -2,7 +2,7 @@
 
 import { Shortcut } from "@/app/page";
 import { FolderInitialState, unMinimizeFolder } from "@/redux/folderSlice";
-import { useSelector, UseSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 const Taskbar = () => {
   const openedFolders :Shortcut[] = useSelector((state : {folder : FolderInitialState}) => state.folder.openFolder)
