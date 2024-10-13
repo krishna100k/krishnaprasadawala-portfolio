@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Taskbar from "@/components/Taskbar";
+import ReduxProvider from "./ReduxProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,12 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <ReduxProvider >
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url("/windows-11-background-image.webp")] bg-cover`}
       >
         {children}
         <Taskbar />
       </body>
+      </ReduxProvider>
     </html>
   );
 }

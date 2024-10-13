@@ -8,13 +8,13 @@ import { useDispatch, UseDispatch, useSelector } from "react-redux";
 import { closeFolder, FolderInitialState } from "@/redux/folderSlice";
 import { minimizeFolder } from "@/redux/folderSlice";
 
-const UserFolder = () => {
+const WorkExperience = () => {
   const [posX, setPosX] = useState(1000);
   const [posY, setPosY] = useState(200);
   const [isMaximized, setIsMaximized] = useState(false);
   const [isMinimized, setisMinimized] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
-  const folderName = "Krishna"
+  const folderName = "Work Experience"
 
 
   const dispatch =useDispatch()
@@ -83,9 +83,9 @@ const UserFolder = () => {
             <div className="w-10 hover:bg-gray-500 h-full flex justify-center items-center" onClick={() => setIsMaximized(!isMaximized)}>< FaRegWindowMaximize size={10}/></div>
             <div className="w-10 hover:bg-red-500 h-full flex justify-center items-center" onClick={() => dispatch(closeFolder(folderName))} ><IoCloseSharp /></div>
         </div>
-        <h1>Hi! I am Krishna</h1>
+        <h1>Hi! These are my Work Experience.</h1>
     </div>
   );
 };
 
-export default UserFolder;
+export default WorkExperience;
