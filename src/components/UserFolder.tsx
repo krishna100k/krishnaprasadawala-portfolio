@@ -5,7 +5,7 @@ import { FaRegWindowMaximize } from "react-icons/fa6";
 import { IoCloseSharp } from "react-icons/io5";
 import { FaMinus } from "react-icons/fa6";
 
-const UserFolder = ({closeWindow} : {closeWindow : Function}) => {
+const UserFolder = ({closeWindow} : any) => {
   const [posX, setPosX] = useState(1000);
   const [posY, setPosY] = useState(200);
   const [isMaximized, setIsMaximized] = useState(false);
