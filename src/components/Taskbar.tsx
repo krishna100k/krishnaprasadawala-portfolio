@@ -10,7 +10,7 @@ const Taskbar = () => {
 
 
   return (
-    <div className="w-full h-12 bg-[#0E022F]/70 fixed bottom-0 backdrop-blur-lg flex justify-between items-center border-t border-gray-600">
+    <div className="w-full h-12 bg-[#0E022F]/70 fixed bottom-0 backdrop-blur-lg flex justify-between items-center border-t border-gray-600 z-[100000]">
       <div></div>
       <div className="flex justify-center items-center">
         {/* Windows Logo */}
