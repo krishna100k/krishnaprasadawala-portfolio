@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { FaRegWindowMaximize } from "react-icons/fa6";
 import { IoCloseSharp } from "react-icons/io5";
 import { FaMinus } from "react-icons/fa6";
-import { useDispatch, UseDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { closeFolder, FolderInitialState } from "@/redux/folderSlice";
 import { minimizeFolder } from "@/redux/folderSlice";
 
@@ -18,7 +18,7 @@ const WorkExperience = () => {
 
 
   const dispatch =useDispatch()
-  let minimizedFolders : string[] = useSelector((state : {folder : FolderInitialState}) => state.folder.minimizedFolders)
+  const minimizedFolders : string[] = useSelector((state : {folder : FolderInitialState}) => state.folder.minimizedFolders)
 
   useEffect(() => {
     if(minimizedFolders.includes(folderName)){

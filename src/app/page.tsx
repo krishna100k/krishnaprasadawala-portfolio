@@ -3,11 +3,12 @@
 import UserFolder from "@/components/UserFolder";
 import { useState } from "react";
 import { shortcuts } from "@/lib/data";
-import { useDispatch, UseDispatch, useSelector, UseSelector  } from "react-redux";
+import { useDispatch, useSelector  } from "react-redux";
 import { FolderInitialState, openFolders } from "@/redux/folderSlice";
 import Projects from "@/components/Projects";
 import WorkExperience from "@/components/WorkExperience";
 import Blogs from "@/components/Blogs";
+import { constants } from "crypto";
 
 export interface Shortcut{
   id : string;
@@ -22,7 +23,7 @@ export default function Home() {
   const [clicked, setClicked] = useState("")
 
   const openFolder = (shortcut : Shortcut) => {
-   let alreadyExists = isOpen.find((open : Shortcut) => {
+   const alreadyExists = isOpen.find((open : Shortcut) => {
      return open.name === shortcut?.name
     })
     if(!alreadyExists){
