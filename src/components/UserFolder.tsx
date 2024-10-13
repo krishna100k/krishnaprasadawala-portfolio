@@ -74,8 +74,8 @@ const UserFolder = () => {
   return (
     <div
       style={{
-        width : isMaximized ? "100vw" : "60vw",
-        height : isMaximized ? "100vh" : "60vh",
+        width : isMaximized || isMobile ? "100vw" : "60vw",
+        height : isMaximized || isMobile ? "100vh" : "60vh",
         top: isMaximized && !isMinimized ? 0 : isMinimized ? '200vh' : `${posY - 10}px`, 
         left: isMaximized || isMobile ? 0 : `${posX / 2 }px`,
         position: "fixed",

@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <ReduxProvider >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url("/windows-11-background-image.webp")] bg-fill md:bg-cover bg-no-repeat`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url("/windows-11-background-image.webp")] bg-fill bg-center lg:bg-cover lg:bg-top bg-no-repeat`}
       >
         {children}
         <Taskbar />
