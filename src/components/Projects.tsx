@@ -14,6 +14,7 @@ const Projects = () => {
   const [isMaximized, setIsMaximized] = useState(false);
   const [isMinimized, setisMinimized] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
+  const [isMobile, setisMobile] = useState(false);
   const folderName = "Projects"
 
 
@@ -21,6 +22,11 @@ const Projects = () => {
   const minimizedFolders : string[] = useSelector((state : {folder : FolderInitialState}) => state.folder.minimizedFolders)
 
   useEffect(() => {
+    if(window.innerWidth <= 850){
+      setisMobile(true)
+      setIsMaximized(true);
+    }
+    
     if(minimizedFolders.includes(folderName)){
       setisMinimized(true);
     }else{
@@ -71,7 +77,7 @@ const Projects = () => {
         width : isMaximized ? "100vw" : "60vw",
         height : isMaximized ? "100vh" : "60vh",
         top: isMaximized && !isMinimized ? 0 : isMinimized ? '200vh' : `${posY - 10}px`, 
-        left: isMaximized ? 0 : `${posX - 550}px`,
+        left: isMaximized || isMobile ? 0 : `${posX / 2 }px`,
         position: "fixed",
         transition: isMaximized || isMinimized ? "top 0.5s ease, left 0.5s ease, width 0.5s ease, height 0.5s ease" : !isMinimized && !isDragging ?  "top 0.5s ease, left 0.5s ease," : "",
         zIndex : isMaximized ? '1000' : ''
