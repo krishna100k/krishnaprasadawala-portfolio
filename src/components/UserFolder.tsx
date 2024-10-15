@@ -7,6 +7,7 @@ import { FaMinus } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
 import { closeFolder, FolderInitialState } from "@/redux/folderSlice";
 import { minimizeFolder } from "@/redux/folderSlice";
+import AnimatedTooltipPreview from "./AnimatedTooltip";
 
 const UserFolder = () => {
   const [posX, setPosX] = useState(1000);
@@ -120,7 +121,8 @@ const UserFolder = () => {
           <IoCloseSharp />
         </div>
       </div>
-      <div className="w-[50rem] m-auto my-16 flex gap-20">
+      <div className="w-[50rem] m-auto my-20">
+      <div className="w-full flex gap-20">
         <div className=" w-[25rem] h-[25rem] rounded-md ">
           <h1 className=" font-extrabold text-3xl">
             Hello! I'm Krishna, a developer based in India.
@@ -141,11 +143,27 @@ const UserFolder = () => {
             Full stack .Net Angular Developer.{" "}
           </p>
           <div className="flex gap-3 mt-5 ">
-            <a href="https://www.linkedin.com/in/krishnaprasad-awala-24142a1b1/" target="_blank"><button className="bg-[#ededed] text-black p-2 rounded-sm hover:bg-[#09090B] hover:text-[#ededed] transition-all ease-in-out duration-300 ">Linkedin</button></a>
-            <a href="https://github.com/krishna100k" target="_blank"><button className="bg-[##27272A] text-[#ededed] p-2 rounded-sm hover:text-[#09090B] hover:bg-[#ededed] border transition-all ease-in-out duration-300">Github</button></a>
+            <a
+              href="https://www.linkedin.com/in/krishnaprasad-awala-24142a1b1/"
+              target="_blank"
+            >
+              <button className="bg-[#ededed] text-black p-2 rounded-sm hover:bg-[#09090B] hover:text-[#ededed] transition-all ease-in-out duration-300 ">
+                Linkedin
+              </button>
+            </a>
+            <a href="https://github.com/krishna100k" target="_blank">
+              <button className="bg-[##27272A] text-[#ededed] p-2 rounded-sm hover:text-[#09090B] hover:bg-[#ededed] border transition-all ease-in-out duration-300">
+                Github
+              </button>
+            </a>
           </div>
         </div>
         <div className="bg-[#27272A] w-[25rem] h-[35rem] rounded-lg bg-[url('/profile-pic.jpg')] bg-no-repeat bg-cover"></div>
+      </div>
+      <div className="w-full mt-20">
+        <h1 className="text-center font-black text-6xl">Skills</h1>
+        <AnimatedTooltipPreview />
+      </div>
       </div>
     </div>
   );
