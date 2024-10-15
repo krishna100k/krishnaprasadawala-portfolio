@@ -7,7 +7,6 @@ import { FaMinus } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
 import { closeFolder, FolderInitialState } from "@/redux/folderSlice";
 import { minimizeFolder } from "@/redux/folderSlice";
-import { Button } from "@/components/ui/button";
 
 const UserFolder = () => {
   const [posX, setPosX] = useState(1000);
@@ -122,7 +121,7 @@ const UserFolder = () => {
         </div>
       </div>
       <div className="w-[50rem] m-auto my-16 flex gap-20">
-        <div className=" w-[25rem] h-[25rem] rounded-md text-justify">
+        <div className=" w-[25rem] h-[25rem] rounded-md ">
           <h1 className=" font-extrabold text-3xl">
             Hello! I'm Krishna, a developer based in India.
           </h1>
