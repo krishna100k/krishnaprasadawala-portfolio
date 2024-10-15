@@ -121,8 +121,8 @@ const UserFolder = () => {
           <IoCloseSharp />
         </div>
       </div>
-      <div className="w-[50rem] m-auto my-16 flex gap-5">
-        <div className=" w-[25rem] h-[25rem] rounded-md">
+      <div className="w-[50rem] m-auto my-16 flex gap-20">
+        <div className=" w-[25rem] h-[25rem] rounded-md text-justify">
           <h1 className=" font-extrabold text-3xl">
             Hello! I'm Krishna, a developer based in India.
           </h1>
@@ -141,9 +141,9 @@ const UserFolder = () => {
             building a web application. Currently I am working at Neilsoft as
             Full stack .Net Angular Developer.{" "}
           </p>
-          <div>
-            <Button variant="outline">Github</Button>
-            <Button variant="outline">Linked</Button>
+          <div className="flex gap-3 mt-5 ">
+            <a href="https://www.linkedin.com/in/krishnaprasad-awala-24142a1b1/" target="_blank"><button className="bg-[#ededed] text-black p-2 rounded-sm hover:bg-[#09090B] hover:text-[#ededed] transition-all ease-in-out duration-300 ">Linkedin</button></a>
+            <a href="https://github.com/krishna100k" target="_blank"><button className="bg-[##27272A] text-[#ededed] p-2 rounded-sm hover:text-[#09090B] hover:bg-[#ededed] border transition-all ease-in-out duration-300">Github</button></a>
           </div>
         </div>
         <div className="bg-[#27272A] w-[25rem] h-[35rem] rounded-lg bg-[url('/profile-pic.jpg')] bg-no-repeat bg-cover"></div>
