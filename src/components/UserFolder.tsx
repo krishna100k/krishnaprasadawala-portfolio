@@ -24,17 +24,32 @@ const UserFolder = () => {
   );
 
   useEffect(() => {
-    if (window.innerWidth <= 850) {
-      setisMobile(true);
-      setIsMaximized(true);
-    }
-
+    const handleResize = () => {
+      if (window.innerWidth <= 1012) {
+        setisMobile(true);
+        setIsMaximized(true);
+      }else{
+        setisMobile(false);
+        setIsMaximized(false);
+      }
+    };
+  
+    window.addEventListener("resize", handleResize);
+  
+    handleResize();
+  
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); 
+  
+  useEffect(() => {
     if (minimizedFolders.includes(folderName)) {
       setisMinimized(true);
     } else {
       setisMinimized(false);
     }
-  }, [minimizedFolders]);
+  }, [minimizedFolders, folderName]);
 
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
     setIsDragging(true);
@@ -92,7 +107,7 @@ const UserFolder = () => {
             : "",
         zIndex: isMaximized ? "1000" : "",
       }}
-      className="bg-[#09090B] rounded-md overflow-auto"
+      className="bg-[#121212] rounded-md overflow-auto"
       onDragOver={handleDragOver}
     >
       <div
@@ -100,7 +115,7 @@ const UserFolder = () => {
         onDragStart={handleDragStart}
         onDrag={(e) => moveFolder(e)}
         onDragEnd={(e) => finalizePosition(e)}
-        className="w-full h-10 bg-[#27272A] backdrop-blur-sm relative top-0 rounded-t-md flex justify-end sticky top-0"
+        className="w-full h-10 bg-[#1B1B1B] backdrop-blur-sm top-0 rounded-t-md flex justify-end sticky "
       >
         <div
           className="w-10 hover:bg-gray-500 h-full flex justify-center items-center"
@@ -121,8 +136,8 @@ const UserFolder = () => {
           <IoCloseSharp />
         </div>
       </div>
-      <div className="w-[50rem] m-auto my-20">
-      <div className="w-full flex gap-20">
+      <div className="md:w-[50rem] w-full m-auto my-20">
+      <div className="w-full flex md:flex-row flex-col-reverse items-center md:items-start gap-20">
         <div className=" w-[25rem] h-[25rem] rounded-md ">
           <h1 className=" font-extrabold text-3xl">
             Hello! I'm Krishna, a developer based in India.
@@ -142,17 +157,17 @@ const UserFolder = () => {
             building a web application. Currently I am working at Neilsoft as
             Full stack .Net Angular Developer.{" "}
           </p>
-          <div className="flex gap-3 mt-5 ">
+          <div className="flex w-full gap-3 mt-5 ">
             <a
               href="https://www.linkedin.com/in/krishnaprasad-awala-24142a1b1/"
               target="_blank"
             >
-              <button className="bg-[#ededed] text-black p-2 rounded-sm hover:bg-[#09090B] hover:text-[#ededed] transition-all ease-in-out duration-300 ">
+              <button className="bg-[#ededed] text-black p-2 rounded-sm hover:bg-[#121212] hover:text-[#ededed] transition-all ease-in-out duration-300 ">
                 Linkedin
               </button>
             </a>
             <a href="https://github.com/krishna100k" target="_blank">
-              <button className="bg-[##27272A] text-[#ededed] p-2 rounded-sm hover:text-[#09090B] hover:bg-[#ededed] border transition-all ease-in-out duration-300">
+              <button className="bg-[#121212] text-[#ededed] p-2 rounded-sm hover:text-[#09090B] hover:bg-[#ededed] border transition-all ease-in-out duration-300">
                 Github
               </button>
             </a>
@@ -160,8 +175,8 @@ const UserFolder = () => {
         </div>
         <div className="bg-[#27272A] w-[25rem] h-[35rem] rounded-lg bg-[url('/profile-pic.jpg')] bg-no-repeat bg-cover"></div>
       </div>
-      <div className="w-full mt-20">
-        <h1 className="text-center font-black text-6xl">Skills</h1>
+      <div className="md:w-full w-auto md:mt-20 mt-28 flex flex-col md:block items-center">
+        <h1 className=" w-[25rem] md:w-auto font-black text-6xl md:text-center">Skills</h1>
         <AnimatedTooltipPreview />
       </div>
       </div>
