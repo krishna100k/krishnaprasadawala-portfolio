@@ -138,7 +138,7 @@ const UserFolder = () => {
       </div>
       <div className="md:w-[50rem] w-full m-auto my-20">
       <div className="w-full flex md:flex-row flex-col-reverse items-center md:items-start gap-20">
-        <div className=" w-[25rem] h-[25rem] rounded-md ">
+        <div className=" w-[95%] sm:w-[25rem] rounded-md ">
           <h1 className=" font-extrabold text-3xl">
             Hello! I'm Krishna, a developer based in India.
           </h1>
@@ -173,10 +173,10 @@ const UserFolder = () => {
             </a>
           </div>
         </div>
-        <div className="bg-[#27272A] w-[25rem] h-[35rem] rounded-lg bg-[url('/profile-pic.jpg')] bg-no-repeat bg-cover"></div>
+        <div className="bg-[#27272A] w-[95%] sm:w-[25rem] h-[35rem] rounded-lg bg-[url('/profile-pic.jpg')] bg-no-repeat bg-cover"></div>
       </div>
-      <div className="md:w-full w-auto md:mt-20 mt-28 flex flex-col md:block items-center">
-        <h1 className=" w-[25rem] md:w-auto font-black text-6xl md:text-center">Skills</h1>
+      <div className="md:w-full w-[95%] ml-2 mt-20  flex flex-col md:block items-center">
+        <h1 className=" w-full sm:w-[25rem] md:w-auto font-black text-6xl md:text-center">Skills</h1>
         <AnimatedTooltipPreview />
       </div>
       </div>
