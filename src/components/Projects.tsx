@@ -9,6 +9,7 @@ import { closeFolder, FolderInitialState } from "@/redux/folderSlice";
 import { minimizeFolder } from "@/redux/folderSlice";
 import AnimatedTooltipPreview from "./AnimatedTooltip";
 import ProjectCard from "./ProjectCard";
+import MiniProjectCard from "./MiniProjectCard";
 
 const Projects = () => {
   const [posX, setPosX] = useState(1000);
@@ -118,7 +119,7 @@ const Projects = () => {
         onDragStart={handleDragStart}
         onDrag={(e) => moveFolder(e)}
         onDragEnd={(e) => finalizePosition(e)}
-        className="w-full h-10 bg-[#1B1B1B] backdrop-blur-sm top-0 rounded-t-md flex justify-end sticky "
+        className="w-full h-10 bg-[#1B1B1B] backdrop-blur-sm top-0 rounded-t-md flex justify-end sticky z-50"
       >
         <div
           className="w-10 hover:bg-gray-500 h-full flex justify-center items-center"
@@ -146,11 +147,14 @@ const Projects = () => {
         <div className="text-start mt-16 mb-24">
         <h1 className="font-extrabold text-6xl">Projects</h1>
         <p className="mt-5">Here are some of the key projects I've worked on, showcasing my skills and experience.</p>
-        <div className="flex justify-start items-center flex-wrap gap-5 mt-10">
+        <div className="flex gap-5 justify-start items-center flex-wrap mt-10">
           <ProjectCard  />
           <ProjectCard  />
           <ProjectCard  />
           <ProjectCard  />
+          <MiniProjectCard />
+          <MiniProjectCard />
+          <MiniProjectCard />
         </div>
         </div>
       </div>
