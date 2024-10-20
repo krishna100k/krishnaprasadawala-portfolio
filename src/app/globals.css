@@ -25,3 +25,15 @@ body {
     --radius: 0.5rem;
   }
 }
+
+
+
+div::-webkit-scrollbar {
+  width: 6px !important; 
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 10px; 
+}
+
