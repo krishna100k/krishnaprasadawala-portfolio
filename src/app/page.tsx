@@ -40,9 +40,7 @@ export default function Home() {
             onDoubleClick={() => openFolder(shortcut)}
              className=" w-20 h-auto flex flex-col gap-2 text-center text-wrap justify-center items-center hover:bg-blue-200/20 " 
              key={shortcut.id}
-             style={{background : clicked == shortcut.name ? "#2E2D49" : ""
-
-             }}
+             style={{background : clicked == shortcut.name ? "#2E2D49" : ""}}
              >
               <img className="w-10 select-none" src={shortcut.image} alt="Icon" />
               <p className="select-none text-sm">{shortcut.name}</p>

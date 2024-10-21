@@ -7,7 +7,6 @@ import { FaMinus } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
 import { closeFolder, FolderInitialState } from "@/redux/folderSlice";
 import { minimizeFolder } from "@/redux/folderSlice";
-import AnimatedTooltipPreview from "./AnimatedTooltip";
 import ProjectCard from "./ProjectCard";
 import MiniProjectCard from "./MiniProjectCard";
 
