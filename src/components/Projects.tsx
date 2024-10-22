@@ -9,6 +9,7 @@ import { closeFolder, FolderInitialState } from "@/redux/folderSlice";
 import { minimizeFolder } from "@/redux/folderSlice";
 import ProjectCard from "./ProjectCard";
 import MiniProjectCard from "./MiniProjectCard";
+import { MajorProjectsData, miniProject } from "@/lib/data";
 
 const Projects = () => {
   const [posX, setPosX] = useState(1000);
@@ -147,13 +148,12 @@ const Projects = () => {
         <h1 className="font-extrabold text-6xl">Projects</h1>
         <p className="mt-5">Here are some of the key projects I've worked on, showcasing my skills and experience.</p>
         <div className="flex gap-5 justify-start items-center flex-wrap mt-10">
-          <ProjectCard  />
-          <ProjectCard  />
-          <ProjectCard  />
-          <ProjectCard  />
-          <MiniProjectCard />
-          <MiniProjectCard />
-          <MiniProjectCard />
+          {
+            MajorProjectsData.map(project => <ProjectCard projectData = {project} />)
+          }
+          {
+            miniProject.map(project => <MiniProjectCard projectData = {project} />)
+          }
         </div>
         </div>
       </div>
