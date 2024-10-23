@@ -107,7 +107,7 @@ const UserFolder = () => {
             : "",
         zIndex: isMaximized ? "1000" : "",
       }}
-      className="bg-[#121212] rounded-md overflow-auto"
+      className="bg-[#121212] rounded-md overflow-auto pb-16 sm:pb-0"
       onDragOver={handleDragOver}
     >
       <div
